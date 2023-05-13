@@ -14,6 +14,9 @@
 $arrayPreguntas = json_decode($cursoEncontrado->preguntas, true);
 /**Variable i para ir sumando y cambiando el id del div  */
 $i = 1;
+$nivelesIdiomaActualUsuario = Auth::user()->conocerNivel($cursoEncontrado->idioma);
+var_dump('El nivel de ' . $cursoEncontrado->idioma . ' es ' . $nivelesIdiomaActualUsuario . ' pero el nivel del curso es  ' . $cursoEncontrado->nivel);
+//var_dump($nivelUsuario);
 //var_dump($arrayPreguntas[0]['opciones']);
 /*
 @auth
@@ -39,7 +42,7 @@ echo "El nivel del usuario de alemán es " . $nivelUsuario['de'];
         <h2 class="text-center">{{$pregunta['pregunta']}}</h2>
         @foreach ( $pregunta['opciones'] as $opciones )
 
-        <button class="btn botonrespuesta col-md-4" onclick="validarPregunta('{{$opciones}}',`{{$pregunta['respuesta_correcta']}}`,'ejercicio<?= $i ?>')">{{$opciones}} </button>
+        <button class="btn botonrespuesta col-md-4 col-sm-12" onclick="validarPregunta('{{$opciones}}',`{{$pregunta['respuesta_correcta']}}`,'ejercicio<?= $i ?>')">{{$opciones}} </button>
         @endforeach
 
         <!--<p class="btn btn-primary">Respuesta: <strong>{{$pregunta['respuesta_correcta']}}</strong></p>--->
@@ -51,7 +54,18 @@ echo "El nivel del usuario de alemán es " . $nivelUsuario['de'];
     <input type="hidden" value="{{$i++}}">
     @endforeach
     <div id="ejercicio<?= $i ?>" class="text-center row mx-0" style="display:none;">
-        <button class="btn btn-success botonEjercicio">Finalizar Curso</button>
+        @if ($nivelesIdiomaActualUsuario == $cursoEncontrado->nivel)
+        <form method="POST" action="/actualizarNivel">
+            @csrf
+            <input type="hidden" name="idioma" value="{{$cursoEncontrado->idioma}}">
+            <input type="submit" class="btn btn-success" value="Finalizar Curso">
+
+        </form>
+        @else
+        <a href="{{url('/espacio-personal')}}">
+            <button class="btn btn-success botonEjercicio">Finalizar Curso</button>
+        </a>
+        @endif
     </div>
 
     <script src="{{ asset('js/ejercicios.js') }}">

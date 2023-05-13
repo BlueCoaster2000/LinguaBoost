@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('style/style.css') }}">
-
+    <link rel="icon" href="images/world.svg">
     <title>LinguaBoost</title>
 </head>
 
@@ -27,7 +27,7 @@
                         <li class="nav-item"><a href="{{url('/register')}}" class="nav-link">Register</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="drop_lan" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Select Your Language
+                                Selecciona tu idioma
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" onclick="changeLanguage('en')"><img class="icon_lan" src="images/en.svg">English</a></li>
@@ -58,18 +58,18 @@
                 <div class=" col-md-9 text-center">
 
                     <h1 id="titulo">
-                        Welcome to the free and best page to learn a language!
+                        ¡Bienvenid@ a la mejor página para aprender idiomas gratis!
                     </h1>
                     <div class="d-block">
                         <a href="{{url('/register')}}">
                             <button class="btn btn-success" id="boton1">
-                                START NOW
+                                EMPIEZA AHORA
                             </button>
                         </a>
                         <a href="{{url('/login')}}">
 
                             <button class="btn btn-secondary" id="boton2">
-                                I HAVE AN ACCOUNT
+                                YA TENGO CUENTA
                             </button>
                         </a>
 
@@ -79,30 +79,76 @@
 
         </section>
         <section class="container-fluid text-center" id="section2">
-            <h2 id="titulo2">Why should you use LinguaBoost?</h2>
+            <h2 id="titulo2">¿Por qué debes usar LinguaBoost?</h2>
             <div class="row">
                 <div class="col div1">
-                    <h3><i class="fa-solid fa-fire-flame-curved" style="color: #ff8800;"></i> Effective Learning</h3>
-                    <p>Quickly learn to read, listen and speak in another language.</p>
+                    <h3><i class="fa-solid fa-fire-flame-curved" style="color: #ff8800;"></i> Apredizaje Efectivo</h3>
+                    <p>Aprende rápido a leer, escuchar y hablar en otro idioma </p>
                 </div>
                 <div class="col div2">
-                    <h3><i class="fa-solid fa-circle-check" style="color: #05ff22;"></i> Learn in your own way</h3>
-                    <p>We base your learning on your preferences, you choose your path when it comes to learning a new language.</p>
+                    <h3><i class="fa-solid fa-circle-check" style="color: #05ff22;"></i></i> Aprende a tu manera</h3>
+                    <p>Basamos tu aprendizaje en tus preferencias, tu eliges tú camino a la hora de aprender un nuevo idioma </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col div3">
-                    <h3><i class="fa-solid fa-dumbbell"></i> Never give up </h3>
-                    <p>At LinguaBoost &copy; we don"t want you to lose motivation or get off track when it comes to learning a new language. < /p>'
+                    <h3><i class="fa-solid fa-dumbbell"></i> Nunca te rindas </h3>
+                    <p>En LinguaBoost &copy; no queremos que pierdas la motivación a la hora de aprender un nuevo idioma</p>
                 </div>
                 <div class="col div4">
-                    <h3><i class="fa-solid fa-face-laugh-squint" style="color: #f1fe39;"></i> Fun Without Limits </h3>
-                    <p>Who said you can"t learn while having fun? With our interactive forms you will learn without even realising it!</p>
+                    <h3><i class="fa-solid fa-face-laugh-squint" style="color: #f1fe39;"></i> Diversión Sin Limites </h3>
+                    <p>¿Quien dijo que no se puede aprender diviertondose? Con nuestros formularios interactivos aprenderás sin darte cuenta</p>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid text-center" id="section3">
+            <div class="row text-center">
+                <div class="col-md-12 col-sm-12 text-center">
+
+                    <h3 class="text-center">Aprende a cualquier hora, donde quieras.</h3>
+                    <p class="text-center">
+                        Usa nuestra aplicación móvil para tus ratos libres o durante tus viajes. Descargala en la Apple store o App Store, encontrás miles de valoraciones positivas que avalan nuestra efectividad.
+
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-md-6 col-sm-12">
+
+                    <img class="img-fluid" src="images/applogoapple.jpg" alt="">
+                </div>
+                <div class=" col-md-6 col-sm-12 ml-1">
+
+                    <img class="img-fluid" src="images/applogoandroid.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid" id="section4">
+            <div class="row">
+                <h3 class="text-center ">¿Quieres aprender con un nativo?</h3>
+                <p class="text-center pb-5">No dudes en hablar con alguno de nuestros expertos</p>
+                <div class="row d-flex align-center paises">
+                    <div class="col-xl-3 col-sm-6 col-6"><img src="/images/paises/espana.png" alt=""></div>
+                    <div class="col-xl-3 col-sm-6 col-6"><img src="/images/paises/bandera-de-brasil.png" alt=""></div>
+                    <div class="col-xl-3 col-sm-6 col-6"><img src="/images/paises/reino-unido.png" alt=""></div>
+                    <div class="col-xl-3 col-sm-6 col-6"><img src="/images/paises/alemania.png" alt=""></div>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
+        <section class="container-fluid">
+            <ul class="row text-center" style="list-style:none;">
+                <a href="{{url('/login')}}" class="nav-link col-md-2 col-xs-2 ">Iniciar Sesión</a>
+                <a href="{{url('/register')}}" class="nav-link col-md-2 col-xs-2">Registrarse</a>
+
+                <li class="col-md-2 col-sm-6"><button class="dropdown-item" onclick="changeLanguage('en')">English</button></li>
+
+                <li class="col-md-2 col-sm-6"><button class="dropdown-item" onclick="changeLanguage('es')">Español</button></li>
+
+                <li class="col-md-2 col-sm-1"><button class="dropdown-item" onclick="changeLanguage('de')">Deusch</button></li>
+            </ul>
+        </section>
         <section class="mb-4 text-center">
             <!-- Facebook -->
             <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
@@ -182,13 +228,14 @@
                     break;
 
                 default:
-                    titulo.innerText = "Welcome to the free and best page to learn a language!";
-                    boton1.innerText = "START NOW";
-                    boton2.innerText = "I HAVE ACCOUNT";
-                    drop.innerText = "Select your language";
-                    div1.innerHTML = '<h3><i class="fa-solid fa-fire-flame-curved" style="color: #ff8800;"></i> Effective Learning</h3><p>Quickly learn to read, listen and speak in another language.</p>';
-                    div2.innerHTML = '<h3><i class="fa-solid fa-circle-check" style="color: #05ff22;"></i> Learn in your own way</h3><p>We base your learning on your preferences, you choose your path when it comes to learning a new language.</p>'
-                    div3.innerHTML = '<h3><i class="fa-solid fa-dumbbell"></i>Nunca pierdas la motivación </h3><p>En LinguaBoost &copy; no queremos que pierdas la motivación ni te salgas del camino que conlleva aprender un nuevo idioma</p>';
+                    titulo.innerText = "¡Bienvenid@ a la mejor página para aprender idiomas gratis!";
+                    boton1.innerText = "EMPIEZA AHORA";
+                    boton2.innerText = "TENGO CUENTA";
+                    titulo2.innerText = "¿Por qué debes usar LinguaBoost?";
+                    drop.innerText = "Selecciona tu idioma";
+                    div1.innerHTML = '<h3><i class="fa-solid fa-fire-flame-curved" style="color: #ff8800;"></i> Apredizaje Efectivo</h3><p>Aprende rápido a leer, escuchar y hablar en otro idioma </p>';
+                    div2.innerHTML = '<h3><i class="fa-solid fa-circle-check" style="color: #05ff22;"></i></i> Aprende a tu manera</h3><p>Basamos tu aprendizaje en tus preferencias, tu eliges tú camino a la hora de aprender un nuevo idioma </p>'
+                    div3.innerHTML = '<h3><i class="fa-solid fa-dumbbell"></i> Nunca te rindas </h3><p>En LinguaBoost &copy; no queremos que pierdas la motivación a la hora de aprender un nuevo idioma</p>';
                     div4.innerHTML = '<h3><i class="fa-solid fa-face-laugh-squint" style="color: #f1fe39;"></i> Diversión Sin Limites </h3><p>¿Quien dijo que no se puede aprender diviertondose? Con nuestros formularios interactivos aprenderás sin darte cuenta</p>';
                     break;
             }

@@ -20,6 +20,6 @@ class NivelesController extends Controller
         $user->subirNivel($idioma);
 
         // Redirigir al usuario a una página de éxito o a otra página de su elección
-        return redirect('/personal');
+        return redirect('/espacio-personal');
     }
 }

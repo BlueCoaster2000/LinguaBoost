@@ -55,11 +55,11 @@ class User extends Authenticatable
 
     public function subirNivel($idioma)
     {
-        if ($idioma == 'es') {
+        if ($idioma == 'Spanish') {
             $this->nivel_es++;
-        } elseif ($idioma == 'eng') {
+        } elseif ($idioma == 'Inglés') {
             $this->nivel_eng++;
-        } elseif ($idioma == 'de') {
+        } elseif ($idioma == 'Aleman') {
             $this->nivel_de++;
         } else {
             // Si hay más idiomas, agregar más condiciones aquí
@@ -75,10 +75,10 @@ class User extends Authenticatable
                 return  $this->nivel_es;
                 break;
             case 'Inglés':
-                return  $this->nivel_es;
+                return  $this->nivel_eng;
                 break;
             case 'Aleman':
-                return  $this->nivel_es;
+                return  $this->nivel_de;
                 break;
 
             default:
