@@ -15,20 +15,6 @@ $arrayPreguntas = json_decode($cursoEncontrado->preguntas, true);
 /**Variable i para ir sumando y cambiando el id del div  */
 $i = 1;
 $nivelesIdiomaActualUsuario = Auth::user()->conocerNivel($cursoEncontrado->idioma);
-var_dump('El nivel de ' . $cursoEncontrado->idioma . ' es ' . $nivelesIdiomaActualUsuario . ' pero el nivel del curso es  ' . $cursoEncontrado->nivel);
-//var_dump($nivelUsuario);
-//var_dump($arrayPreguntas[0]['opciones']);
-/*
-@auth
-$siglasIdioma =  strtolower(substr($cursoEncontrado->idioma,2));
-$nivel_eng = Auth::user()->conocerNivel();
-$nivel_es = Auth::user()->nivel_es;
-$nivel_de = Auth::user()->nivel_de;
-$nivelesUsuario = ['es' => $nivel_es, 'eng' => $nivel_eng, 'de' => $nivel_de];
-echo "El nivel del usuario de español es " . $nivelUsuario['es'];
-echo "El nivel del usuario de inglés es " . $nivelUsuario['eng'];
-echo "El nivel del usuario de alemán es " . $nivelUsuario['de'];
-@endauth*/
 ?>
 
 <h1 class="text-center">Ejercicio <span id="numeroEjercicio"></span></h1>
@@ -42,7 +28,7 @@ echo "El nivel del usuario de alemán es " . $nivelUsuario['de'];
         <h2 class="text-center">{{$pregunta['pregunta']}}</h2>
         @foreach ( $pregunta['opciones'] as $opciones )
 
-        <button class="btn botonrespuesta col-md-4 col-sm-12" onclick="validarPregunta('{{$opciones}}',`{{$pregunta['respuesta_correcta']}}`,'ejercicio<?= $i ?>')">{{$opciones}} </button>
+        <button class="btn botonrespuesta col-md-6 col-sm-12" onclick="validarPregunta('{{$opciones}}',`{{$pregunta['respuesta_correcta']}}`,'ejercicio<?= $i ?>')">{{$opciones}} </button>
         @endforeach
 
         <!--<p class="btn btn-primary">Respuesta: <strong>{{$pregunta['respuesta_correcta']}}</strong></p>--->

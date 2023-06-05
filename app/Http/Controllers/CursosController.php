@@ -15,18 +15,18 @@ class CursosController extends Controller
         return view('mostrar-curso', ['curso' => $curso]);
     }
 
-    public function mostrarCursoPorIdiomaYNivel($idioma, $nivel)
+    public function mostrarCursoPorIdiomaYNivel($idioma, $nivel) //Función para buscar unn curso por su idioma y nivel
     {
-        //$curso = new Curso("Spanish", 1, json_encode('{["pregunta1":"nonMateo","respuesta1":"peo"]}'));
+       
         $cursoEncontrado = Curso::where('idioma', $idioma)->where('nivel', $nivel)->firstOrFail();
         $cursoNuevo = new Curso($cursoEncontrado['idioma'], $cursoEncontrado['nivel'], $cursoEncontrado['preguntas']);
 
 
-        if (!empty($cursoNuevo)) {
+        if (!empty($cursoNuevo)) { //si cursoNuevo no está vacio
 
-            return view('cursos.mostrar-curso', ['cursoEncontrado' => $cursoNuevo]);
+            return view('cursos.mostrar-curso', ['cursoEncontrado' => $cursoNuevo]); //devuelvo ese curso
         } else {
-            return view('cursos.curso-no-encontrado');
+            return view('cursos.curso-no-encontrado'); //Devuelvo una vista de CURSO NO ENCONTRADO
         }
     }
 }

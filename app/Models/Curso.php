@@ -11,7 +11,7 @@ class Curso extends Model
     public $nivel;
     public $preguntas;
 
-    public function __construct($idioma = '', $nivel = 0, $preguntas = 'gola')
+    public function __construct($idioma = '', $nivel = 0, $preguntas = 'pregunta')
     {
         $this->idioma = $idioma;
         $this->nivel = $nivel;

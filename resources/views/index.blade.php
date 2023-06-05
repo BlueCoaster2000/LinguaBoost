@@ -190,7 +190,7 @@
             let drop = document.querySelector('#drop_lan');
             //Divs de contenido del inicio y titulo
             let titulo2 = document.querySelector('#titulo2');
-            titulo2.innerText = "maricon";
+
             let div1 = document.querySelector(".div1");
             let div2 = document.querySelector(".div2");
             let div3 = document.querySelector(".div3");

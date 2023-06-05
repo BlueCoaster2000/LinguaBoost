@@ -25,19 +25,20 @@ function validarPregunta(respuestaUsuario, respuestaCorrecta, idPregunta) {
     audioFail();
     let elemento = document.getElementById(idPregunta);
     if (respuestaCorrecta == respuestaUsuario) {
-        playAudio("./ fail.mp3'");
         elemento.style.backgroundColor = "green";
-        playAudio("../images/exercises/correcto.mp3");
-        playAudio("{{ asset('./fail.mp3') }}");
+        playAudio("../images/exercises/correcto.mp3"); //reproducir un audio que demuestre que la pregunta es correcta
 
         //Coger el último número del elemento para mostrar el siguiente ej
         let siguienteEj = parseInt(idPregunta.charAt(9));
         let elementoSiguiente = document.getElementById(
             "ejercicio" + (siguienteEj + 1) //Aquí obtengo el número del ejercicio siguiente
         );
-        elemento.style.display = "none";
-
-        elementoSiguiente.style.display = "";
+        elemento.style.backgroundColor = "green";
+        setTimeout(function () {
+            elemento.style.display = "none";
+            elemento.style.backgroundColor = "";
+            elementoSiguiente.style.display = "";
+        }, 500);
 
         return true;
     } else {
