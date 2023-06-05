@@ -9,7 +9,7 @@
     </a>
     @endguest
     @auth
-    <h2>Bienvenido<span class="nombreUser">{{auth()->user()->name}}</span>disfruta de tus cursos:</h2>
+    <h2>Bienvenido<span class="nombreUser"> {{auth()->user()->name}} </span>disfruta de tus cursos:</h2>
     <?php
     //Obtenemos los niveles del usuario auntenticado para discriminar en que puede elegir y que no
 
